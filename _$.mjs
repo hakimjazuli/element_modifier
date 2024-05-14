@@ -14,7 +14,7 @@ export class _$ {
 	 * @param {string} value
 	 */
 	outerHtml = (value) => {
-		if (this.el && this.el.isConnected) {
+		if (this.el) {
 			this.el.outerHTML = value;
 		}
 	};
@@ -22,7 +22,7 @@ export class _$ {
 	 * @param {string} value
 	 */
 	innerHtml = (value) => {
-		if (this.el && this.el.isConnected) {
+		if (this.el) {
 			this.el.innerHTML = value;
 		}
 		return this;
@@ -31,7 +31,7 @@ export class _$ {
 	 * @param {string} value
 	 */
 	innerText = (value) => {
-		if (this.el && this.el.isConnected) {
+		if (this.el) {
 			if (this.el instanceof HTMLElement) {
 				this.el.innerText = value;
 			}
@@ -42,7 +42,7 @@ export class _$ {
 	 * @param {string} value
 	 */
 	textContent = (value) => {
-		if (this.el && this.el.isConnected) {
+		if (this.el) {
 			this.el.textContent = value;
 		}
 		return this;
@@ -51,7 +51,7 @@ export class _$ {
 	 * @param {string} value
 	 */
 	value = (value) => {
-		if (this.el && this.el.isConnected) {
+		if (this.el) {
 			if (this.el instanceof HTMLInputElement) {
 				this.el.value = value;
 			}
@@ -62,7 +62,7 @@ export class _$ {
 	 * @param {Object.<string,string>} styles_object
 	 */
 	styles = (styles_object) => {
-		if (this.el && this.el.isConnected) {
+		if (this.el) {
 			if (this.el instanceof HTMLElement) {
 				for (const style in styles_object) {
 					this.el.style[style] = styles_object[style];
@@ -75,7 +75,7 @@ export class _$ {
 	 * @param {Object.<'add'|'remove',string[]>} class_list_definition
 	 */
 	classList = (class_list_definition) => {
-		if (this.el && this.el.isConnected) {
+		if (this.el) {
 			for (const add_or_remove in class_list_definition) {
 				for (let i = 0; i < class_list_definition[add_or_remove].length; i++) {
 					this.el.classList[add_or_remove](class_list_definition[add_or_remove][i]);
@@ -88,7 +88,7 @@ export class _$ {
 	 * @param {HTMLElement|Element} node
 	 */
 	append = (node) => {
-		if (this.el && this.el.isConnected) {
+		if (this.el) {
 			this.el.appendChild(node);
 		}
 		return this;
@@ -97,7 +97,7 @@ export class _$ {
 	 * @param {HTMLElement|Element} node
 	 */
 	prepend = (node) => {
-		if (this.el && this.el.isConnected) {
+		if (this.el) {
 			this.el.prepend(node);
 		}
 		return this;
@@ -106,7 +106,7 @@ export class _$ {
 	 * @param {HTMLElement|Element} node
 	 */
 	before = (node) => {
-		if (this.el && this.el.isConnected) {
+		if (this.el) {
 			if (!this.el.parentNode) {
 				return;
 			}
@@ -118,7 +118,7 @@ export class _$ {
 	 * @param {Element} node
 	 */
 	after = (node) => {
-		if (this.el && this.el.isConnected) {
+		if (this.el) {
 			this.el.insertAdjacentElement('afterend', node);
 		}
 		return this;
@@ -128,7 +128,7 @@ export class _$ {
 	 * - you can generate NamedNodeMap from element.attributes
 	 */
 	attributes = (custom_attribute_n_value) => {
-		if (this.el && this.el.isConnected) {
+		if (this.el) {
 			if (custom_attribute_n_value instanceof NamedNodeMap) {
 				for (let i = 0; i < custom_attribute_n_value.length; i++) {
 					const { name, value } = custom_attribute_n_value[i];
@@ -159,7 +159,7 @@ export class _$ {
 	 * @param {Element} node
 	 */
 	replace = (node) => {
-		if (this.el && this.el.isConnected) {
+		if (this.el) {
 			if (!this.el.parentNode) {
 				return;
 			}
@@ -170,7 +170,7 @@ export class _$ {
 	 * @param {((element:HTMLElement|Element)=>Promise<any>)} callback
 	 */
 	script = async (callback) => {
-		if (this.el && this.el.isConnected) {
+		if (this.el) {
 			await callback(this.el);
 		}
 		return this;
