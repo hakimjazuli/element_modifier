@@ -1,24 +1,22 @@
 {
-  "name": "@html_first/element_modifier",
-  "version": "1.0.2",
-  "description": "simple element modifier for @html_first; client only",
-  "main": "index.mjs",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hakimjazuli/element_modifier.git"
-  },
-  "keywords": [
-    "simple",
-    "element",
-    "modifier"
-  ],
-  "author": "hakim_jazuli",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/hakimjazuli/element_modifier/issues"
-  },
-  "homepage": "https://github.com/hakimjazuli/element_modifier#readme"
+	"name": "@html_first/element_modifier",
+	"version": "1.0.2",
+	"description": "simple element modifier for @html_first; client only",
+	"main": "index.mjs",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hakimjazuli/element_modifier.git"
+	},
+	"keywords": [
+		"simple element modifier"
+	],
+	"author": "hakim_jazuli",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/hakimjazuli/element_modifier/issues"
+	},
+	"homepage": "https://github.com/hakimjazuli/element_modifier#readme"
 }
