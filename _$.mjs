@@ -13,7 +13,7 @@ export class _$ {
 	/**
 	 * @param {string} value
 	 */
-	outerHtml = (value) => {
+	outerHTML = (value) => {
 		if (this.el) {
 			this.el.outerHTML = value;
 		}
@@ -21,7 +21,7 @@ export class _$ {
 	/**
 	 * @param {string} value
 	 */
-	innerHtml = (value) => {
+	innerHTML = (value) => {
 		if (this.el) {
 			this.el.innerHTML = value;
 		}
@@ -94,32 +94,32 @@ export class _$ {
 		return this;
 	};
 	/**
-	 * @param {HTMLElement|Element} node
+	 * @param {HTMLElement|Element} elem
 	 */
-	prepend = (node) => {
+	prepend = (elem) => {
 		if (this.el) {
-			this.el.prepend(node);
+			this.el.prepend(elem);
 		}
 		return this;
 	};
 	/**
-	 * @param {HTMLElement|Element} node
+	 * @param {HTMLElement|Element} elem
 	 */
-	before = (node) => {
+	before = (elem) => {
 		if (this.el) {
 			if (!this.el.parentNode) {
 				return;
 			}
-			this.el.parentNode.insertBefore(node, this.el);
+			this.el.parentNode.insertBefore(elem, this.el);
 		}
 		return this;
 	};
 	/**
-	 * @param {Element} node
+	 * @param {HTMLElement|Element} elem
 	 */
-	after = (node) => {
+	after = (elem) => {
 		if (this.el) {
-			this.el.insertAdjacentElement('afterend', node);
+			this.el.insertAdjacentElement('afterend', elem);
 		}
 		return this;
 	};
@@ -156,14 +156,14 @@ export class _$ {
 		return this;
 	};
 	/**
-	 * @param {Element} node
+	 * @param {HTMLElement|Element} elem
 	 */
-	replace = (node) => {
+	replace = (elem) => {
 		if (this.el) {
 			if (!this.el.parentNode) {
 				return;
 			}
-			this.el.parentNode.replaceChild(node, this.el);
+			this.el.parentNode.replaceChild(elem, this.el);
 		}
 	};
 	/**
